@@ -1,5 +1,8 @@
 import Tooltip from './wizzy-ui/tooltip';
 import Dropdown from './wizzy-ui/dropdown';
+import Tabs from './wizzy-ui/tabs';
+
+
 
 //create a tooltip
 
@@ -13,3 +16,6 @@ dropdowns.forEach((dropdown) => {
     const instance = new Dropdown(dropdown);
     instance.init()
 });
+
+const tabs = new Tabs(document.querySelector('.tabs'));
+tabs.init();
