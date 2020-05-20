@@ -1,6 +1,7 @@
 import Tooltip from './wizzy-ui/tooltip';
 import Dropdown from './wizzy-ui/dropdown';
 import Tabs from './wizzy-ui/tabs';
+import Snackbar from './wizzy-ui/snackbar';
 
 
 
@@ -19,3 +20,13 @@ dropdowns.forEach((dropdown) => {
 
 const tabs = new Tabs(document.querySelector('.tabs'));
 tabs.init();
+
+//create snackbar
+
+const snackbar = new Snackbar();
+snackbar.init();
+
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    snackbar.show('You clicked me :)')
+});
